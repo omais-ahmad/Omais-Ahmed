@@ -226,6 +226,119 @@
     }
   });
 
+  // Dynamic Portfolio
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const portfolioItems = [
+
+      {
+        id: "akki",
+        img: "assets/img/portfolio/app/akki6.png",
+        title: "AKKI",
+        category: "App",
+        filter: "filter-app"
+      },
+      {
+        id: "yai",
+        img: "assets/img/portfolio/app/YAI Angular Ionic.png",
+        title: "YAI - life bot",
+        category: "App",
+        filter: "filter-app"
+      },
+      {
+        id: "react-app",
+        img: "assets/img/portfolio/app/phsyco.png",
+        title: "react-app",
+        category: "App",
+        filter: "filter-app"
+      },
+      {
+        id: "ospp",
+        img: "assets/img/portfolio/web/ospp.png",
+        title: "OSPP - Landing page",
+        category: "Web",
+        filter: "filter-web"
+      },
+      {
+        id: "IA",
+        img: "assets/img/portfolio/web/insurance.png",
+        title: "Insurance App",
+        category: "Web",
+        filter: "filter-web"
+      },
+      {
+        id: "ecom",
+        img: "assets/img/portfolio/web/myDawa.png",
+        title: "Telehealth Ecommerce App",
+        category: "Web",
+        filter: "filter-web"
+      },
+      {
+        id: "sb",
+        img: "assets/img/portfolio/web/smartbalancer.png",
+        title: "Smart Balancer App",
+        category: "Web",
+        filter: "filter-web"
+      },
+      {
+        id: "softo",
+        img: "assets/img/portfolio/web/softoteam.png",
+        title: "Softoteam Landing Page",
+        category: "Web",
+        filter: "filter-web"
+      },
+      {
+        id: "webmantis",
+        img: "assets/img/portfolio/web/webmantis.png",
+        title: "Webmantis Landing Page",
+        category: "Web",
+        filter: "filter-web"
+      },
+
+    ];
+
+    const container = document.getElementById("portfolio-items");
+
+    if (container) {
+      portfolioItems.forEach(item => {
+        const div = document.createElement("div");
+        div.className = `col-lg-4 col-md-6 portfolio-item ${item.filter}`;
+        div.innerHTML = `
+        <div class="portfolio-wrap">
+          <img src="${item.img}" class="img-fluid" alt="${item.title}">
+          <div class="portfolio-info">
+            <h4>${item.title}</h4>
+            <p>${item.category}</p>
+            <div class="portfolio-links">
+              <a href="${item.img}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${item.title}">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details" data-id="${item.id}" '>
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+        container.appendChild(div);
+      });
+      // Now attach event listeners after DOM elements are inserted
+      const detailLinks = document.querySelectorAll(".portfolio-details-lightbox");
+      detailLinks.forEach(link => {
+        link.addEventListener("click", function () {
+          const projectId = this.getAttribute("data-id");
+          setSelectedProject(projectId);
+        });
+      });
+    }
+  });
+
+
+  function setSelectedProject(id) {
+    localStorage.setItem("selectedProjectId", id);
+  }
+
+
   /**
    * Testimonials slider
    */
@@ -286,6 +399,72 @@
     if (ageElement) {
       ageElement.textContent = age;
     }
+  });
+
+
+  const projectDetails = [
+    {
+      id: "akki",
+      title: "AKKI",
+      category: "App",
+      client: "TechX",
+      date: "Aug 2025",
+      url: "https://akki.example.com",
+      description: "AKKI is a productivity tool designed for task automation.",
+      images: [
+        "assets/img/portfolio/app/akki6.png",
+        "assets/img/portfolio/app/akki2.png",
+        "assets/img/portfolio/app/akki3.png"
+      ]
+    },
+    {
+      id: "yai",
+      title: "YAI - life bot",
+      category: "App",
+      client: "YAI Inc",
+      date: "Jul 2025",
+      url: "https://yai.example.com",
+      description: "YAI is an AI-powered assistant for life coaching.",
+      images: [
+        "assets/img/portfolio/app/YAI Angular Ionic.png"
+      ]
+    }
+    // ... more project detail entries
+  ];
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const selectedId = localStorage.getItem("selectedProjectId");
+    const project = projectDetails.find(p => p.id === selectedId);
+    if (!project) return;
+
+    // Update image slider
+    const swiperWrapper = document.querySelector(".portfolio-details-slider .swiper-wrapper");
+    swiperWrapper.innerHTML = project.images.map(img => `
+      <div class="swiper-slide">
+        <img src="${img}" alt="${project.title}">
+      </div>
+    `).join('');
+
+    new Swiper(".portfolio-details-slider", {
+      speed: 400,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true
+      }
+    });
+
+    // Fill in the info
+    document.querySelector(".portfolio-info ul").innerHTML = `
+      <li><strong>Category</strong>: ${project.category}</li>
+      <li><strong>Client</strong>: ${project.client}</li>
+      <li><strong>Project date</strong>: ${project.date}</li>
+      <li><strong>Project URL</strong>: <a href="${project.url}" target="_blank">${project.url}</a></li>
+    `;
+
+    document.querySelector(".portfolio-description h2").innerText = project.title;
+    document.querySelector(".portfolio-description p").innerText = project.description;
   });
 
 })()

@@ -1,0 +1,60 @@
+[
+    {
+        "id": "akki",
+        "title": "AKKI",
+        "category": "App",
+        "client": "TechX",
+        "date": "Aug 2024",
+        "url": "",
+        "description": "AKKI is a productivity tool designed for task automation.",
+        "images": [
+            "assets/img/portfolio/app/akki-1.png",
+            "assets/img/portfolio/app/akki-2.png",
+            "assets/img/portfolio/app/akki3.png",
+            "assets/img/portfolio/app/akki4.png",
+            "assets/img/portfolio/app/akki5.png",
+            "assets/img/portfolio/app/akki6.png",
+            "assets/img/portfolio/app/akki.png"
+        ]
+    },
+    {
+        "id": "yai",
+        "title": "YAI – AI-Powered App for Psychiatrists",
+        "category": "App",
+        "client": "YAI Inc",
+        "date": "Jan 2025",
+        "url": "#",
+        "description": "YAI is a cutting-edge mobile application developed using Angular and Ionic, tailored specifically for psychiatrists and mental health professionals. Inspired by the intuitive user experience and sleek interface of the ChatGPT mobile app, YAI offers an AI-powered assistant to support medical professionals in their day-to-day tasks.\n\nThe app provides a seamless, conversational interface where psychiatrists can ask questions, receive suggestions, generate clinical notes, and access mental health resources—all powered by advanced AI integration.\n\nKey Features:\n\n✅ Sleek and modern UI inspired by ChatGPT\n✅ Real-time AI chat functionality for professional support\n✅ Responsive design with smooth animations\n✅ Dark and light mode compatibility\n✅ Cross-platform support (Android & iOS)\n✅ Built with Angular & Ionic for performance and scalability\n\nWhether you're a healthcare startup or a solo practitioner, YAI demonstrates my ability to build AI-integrated mobile applications with a clean, intuitive UI and efficient performance.\n\nTech Stack:\n🔧 Angular • Ionic • TypeScript • HTML/CSS • Firebase • AI API Integration",
+        "images": [
+            "assets/img/portfolio/app/YAI Angular Ionic.png",
+            "assets/img/portfolio/app/YAI Ionic Angular.png"
+        ]
+    },
+    {
+        "id": "react-app",
+        "title": "A React Ionic App Login",
+        "category": "App",
+        "client": "Freelance",
+        "date": "Mar 2024",
+        "url": "#",
+        "description": "Login page for a React Ionic Based App",
+        "images": [
+            "assets/img/portfolio/app/phsyco.png"
+        ]
+    },
+    {
+        "id": "ospp",
+        "title": "OSP Pakistan – Landing Page",
+        "category": "Web",
+        "client": "Freelance",
+        "date": "Nov 2024",
+        "url": "https://ospp-coral.vercel.app",
+        "description": "I designed and developed a modern, responsive landing page for OSP Pakistan, a state-of-the-art cold storage and ice manufacturing facility. The page was built using pure HTML, CSS, JavaScript, and Bootstrap, ensuring fast load times, mobile responsiveness, and an engaging user experience.\n\nOSP Pakistan is positioned to serve local, regional, and global clients, enhancing their supply chain operations through reliable storage and distribution services. The landing page communicates the company's core values—innovation, scale, and efficiency—with a clear, persuasive layout.\n\nKey Features:\n\n✅ Eye-catching hero section with bold branding\n✅ Clean layout highlighting services and capabilities\n✅ Responsive design for all screen sizes\n✅ Scroll-based animations and smooth transitions\n✅ Lightweight and performance-optimized\n✅ Built-in contact form for inquiries and lead generation\n\nDesign Goals:\n\n🌐 Establish a strong online presence for OSP Pakistan\n📱 Ensure accessibility on all devices with Bootstrap responsiveness\n🚀 Keep performance fast with minimal dependencies\n📈 Drive interest from logistics and supply chain partners\n\nTech Stack:\n🧊 HTML5 • CSS3 • Bootstrap 5 • JavaScript",
+        "images": [
+            "assets/img/portfolio/web/ospp.png",
+            "assets/img/portfolio/web/ospp (2).png",
+            "assets/img/portfolio/web/ospp (3).png",
+            "assets/img/portfolio/web/ospp (4).png"
+        ]
+    }
+]
