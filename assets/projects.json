@@ -56,5 +56,76 @@
             "assets/img/portfolio/web/ospp (3).png",
             "assets/img/portfolio/web/ospp (4).png"
         ]
+    },
+    {
+        "id": "ecom",
+        "title": "myDawa – eCommerce Website for Health Products",
+        "category": "Web",
+        "client": "Telehealth Company of Kenya",
+        "date": "Dec 2023",
+        "url": "#",
+        "description": "myDawa is a feature-rich eCommerce platform built specifically for selling healthcare and wellness products online. Developed using Angular, Tailwind CSS, HTML, and SCSS, the platform offers a smooth, modern shopping experience tailored for pharmacies, supplement vendors, and health-focused brands.\n\nFrom prescription products to fitness supplements and personal care items, myDawa provides a scalable solution for online health retail with a fully responsive design and seamless performance across devices.\n\nKey Features:\n✅ Clean and modern UI using Tailwind CSS and SCSS\n✅ Product catalog with advanced filtering and search\n✅ Shopping cart and secure checkout functionality\n✅ User account management with order history\n✅ Admin panel for product & inventory management\n✅ Fully responsive and mobile-optimized layout\n✅ SEO-ready with structured content and fast load speeds\n\nDesign & Development Highlights:\n📱 Mobile-first, intuitive UI/UX with real-time interactions\n⚙️ Built on Angular for robust SPA architecture and performance\n💳 Ready for integration with payment gateways like Stripe or PayPal\n🚚 Support for shipping, tracking, and custom delivery options\n📊 Easily extendable for analytics, user reviews, or subscription models\n\nTech Stack:\n🛒 Angular • Tailwind CSS • HTML5 • SCSS • TypeScript\n\nmyDawa is a powerful showcase of my skills in building scalable, high-performance web applications, with a focus on modern eCommerce functionality, responsive design principles, and clean, maintainable code.",
+        "images": [
+            "assets/img/portfolio/web/myDawa.png",
+            "assets/img/portfolio/web/myDawa (2).png",
+            "assets/img/portfolio/web/myDawa (3).png",
+            "assets/img/portfolio/web/myDawa (4).png"
+        ]
+    },
+    {
+        "id": "IA",
+        "title": "Insurance App",
+        "category": "Web",
+        "client": "Insurance Company of Kenya",
+        "date": "Mar 2024",
+        "url": "#",
+        "description": "Insurance App For Kenya based Company",
+        "images": [
+            "assets/img/portfolio/web/insurance.png",
+            "assets/img/portfolio/web/insurance-2.png",
+            "assets/img/portfolio/web/insurance-3.png",
+            "assets/img/portfolio/web/insurance-4.png"
+        ]
+    },
+    {
+        "id": "sb",
+        "title": "Smart Balancer – Finance & Expense Management App",
+        "category": "Web",
+        "client": "Personal",
+        "date": "Aug 2024",
+        "url": "#",
+        "description": "Smart Balancer is a full-featured finance and bookkeeping mobile app developed using Angular with Bootstrap and Tailwind CSS. Designed to streamline budgeting, expense tracking, and financial planning, the app takes inspiration from Zoho Books and delivers a clean, professional UI with powerful financial tools.\n\nBuilt for individuals and small businesses, Smart Balancer provides users with real-time insights into income, expenses, account balances, and financial trends—all accessible on the go across Android and iOS devices.\n\nKey Features:\n✅ User-friendly dashboard with real-time income and expense summary\n✅ Ability to add, edit, and categorize financial transactions\n✅ Generate visual financial reports and balance charts\n✅ Support for multiple accounts and currencies\n✅ Export financial data in PDF or CSV format\n✅ Secure login with cloud-based data synchronization\n✅ Cross-platform mobile support built with Angular & Ionic\n\nDesign & Development Highlights:\n📱 Mobile-first design with an intuitive, professional UI/UX\n⚙️ Built using Angular for a performant and scalable SPA structure\n📈 Integrated Chart.js for dynamic, real-time financial visualizations\n💼 Supports multi-account, multi-currency bookkeeping workflows\n🔐 Emphasis on data security, backup, and cloud syncing\n📤 Export-ready architecture for easy financial record keeping\n\nTech Stack:\n📊 Angular • TypeScript • Chart.js • HTML5 • Tailwind CSS • Bootstrap • Ionic\n\nSmart Balancer is a strong example of my expertise in building modern, scalable, and responsive financial apps, combining sleek design with robust accounting functionality.",
+        "images": [
+            "assets/img/portfolio/web/smartbalancer.png",
+            "assets/img/portfolio/web/smartbalancer app angular html css tailwind bootstrap javasript.png",
+            "assets/img/portfolio/web/smartbalancer app angular html css tailwind bootstrap javasript scss.png"
+        ]
+    },
+    {
+        "id": "softo",
+        "title": "SoftoTeam–Landing Page (Responsive&SEO Optimized )",
+        "category": "Web",
+        "client": "HRM System Company",
+        "date": "Apr 2025",
+        "url": "#",
+        "description": "I designed and developed a high-converting, responsive landing page for SoftoTeam, a modern Human Resource Management (HRM) application built to simplify workforce operations for businesses of all sizes.\n\nThe landing page features a clean, professional design that reflects the product's focus on trust, efficiency, and innovation—ideal for SaaS solutions targeting HR teams. It clearly communicates the platform’s value proposition and encourages user engagement through compelling visuals and CTAs.\n\nKey Sections:\n✅ Hero section with prominent call-to-action\n✅ Feature highlights: Payroll, Attendance, Recruitment, Performance\n✅ Social proof with client/company logos\n✅ SEO-optimized, mobile-first layout\n\nDesign Goals:\n📈 Increase conversions through structured layout and persuasive copy\n📱 Fully mobile-responsive and cross-browser compatible\n🚀 Fast-loading and optimized for Core Web Vitals\n🔍 SEO-friendly with schema markup and meta optimization\n\nTech Stack:\n🌐 HTML • SCSS • Bootstrap • JavaScript\n\nThis project showcases my ability to craft visually compelling, performance-optimized landing pages tailored for SaaS products—driving traffic, engagement, and conversions for modern digital brands.",
+        "images": [
+            "assets/img/portfolio/web/softoteam.png",
+            "assets/img/portfolio/web/softoteam2.png"
+        ]
+    },
+    {
+        "id": "webmantis",
+        "title": "WebMantis – Service Provider Website Built",
+        "category": "Web",
+        "client": "Service Provider Company",
+        "date": "Oct 2024",
+        "url": "webmantis.co",
+       "description": "WebMantis is a sleek, responsive website developed for a multi-service provider offering a wide range of digital and IT solutions. Built entirely with core HTML5, CSS3, JavaScript, and Bootstrap 5, the site delivers a fast, lightweight, and accessible experience optimized for all devices.\n\nThe primary goal was to design a visually striking and highly functional platform that showcases the client’s diverse service portfolio in a clean, structured, and user-friendly layout. The navigation is smooth, and the design is crafted to help users quickly discover the services they need without friction.\n\nCore Services Highlighted:\n• UI/UX Design\n• Web Development\n• Cyber Security\n• SaaS Solutions\n• Product Development\n• CRM Integration & Cloud Services\n• Software & App Development\n• Digital & Multimedia Marketing\n• Event & Corporate Management\n• Artificial Intelligence (AI)\n\nKey Features:\n✅ Fully responsive layout using Bootstrap’s grid system\n✅ Interactive service sections with hover and scroll-triggered animations\n✅ Clean, semantic HTML structure for better SEO and maintainability\n✅ Lightweight JavaScript for smooth interactivity\n✅ Optimized performance with minimal external dependencies\n✅ Professional and modern design tailored for a B2B audience\n\nTech Stack:\n💻 HTML5 • CSS3 • JavaScript • Bootstrap 5\n\nWebMantis is a strong example of my ability to build performant, user-centric websites from scratch using core web technologies—ideal for service providers and enterprise-focused digital brands.\n\nVisit the live project: 🌐 https://webmantis.co/",
+        "images": [
+            "assets/img/portfolio/web/webmantis.png",
+            "assets/img/portfolio/web/webmantis (2).png",
+            "assets/img/portfolio/web/webmantis (3).png"
+        ]
     }
 ]
