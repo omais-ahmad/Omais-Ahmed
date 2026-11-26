@@ -2,7 +2,7 @@ import { useId, useRef, useState, type FormEvent } from 'react'
 import { Icon } from '@/components/Icon'
 import { Reveal } from '@/components/Reveal'
 import { Section } from '@/components/Section'
-import { safeExternalUrl } from '@/lib/format'
+import { safeExternalUrl, whatsappUrl } from '@/lib/format'
 import { useContent } from '@/lib/content'
 import {
   CONTACT_LIMITS,
@@ -108,6 +108,25 @@ export function Contact({ index }: { index: string }) {
                   <span className="contact-card__text">
                     <span>Phone</span>
                     <strong>{profile.phone}</strong>
+                  </span>
+                  <Icon name="arrow-up-right" size={16} />
+                </a>
+              </li>
+            )}
+            {whatsappUrl(profile.whatsapp) && (
+              <li>
+                <a
+                  className="contact-card"
+                  href={whatsappUrl(profile.whatsapp, `Hi ${profile.name.split(/\s+/)[0]}, I came across your portfolio and would like to get in touch.`) ?? undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="contact-card__icon">
+                    <Icon name="whatsapp" />
+                  </span>
+                  <span className="contact-card__text">
+                    <span>WhatsApp</span>
+                    <strong>Message me on WhatsApp</strong>
                   </span>
                   <Icon name="arrow-up-right" size={16} />
                 </a>

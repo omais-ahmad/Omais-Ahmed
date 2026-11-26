@@ -35,3 +35,14 @@ export function safeExternalUrl(value: string): string | null {
   const trimmed = value.trim()
   return /^(https?:\/\/|mailto:)/i.test(trimmed) ? trimmed : null
 }
+
+/**
+ * Link that opens WhatsApp on the given number with a message already typed.
+ * Returns null when the number has too few digits to be a real international number.
+ */
+export function whatsappUrl(number: string, message = ''): string | null {
+  const digits = number.replace(/\D/g, '').replace(/^00/, '')
+  if (digits.length < 8 || digits.length > 15) return null
+  const text = message.trim()
+  return `https://wa.me/${digits}${text ? `?text=${encodeURIComponent(text)}` : ''}`
+}

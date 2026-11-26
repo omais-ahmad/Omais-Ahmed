@@ -870,6 +870,133 @@ button.diagram__node:hover,
   border-color: var(--line-strong);
 }
 
+/* ---------- WhatsApp launcher ---------- */
+
+.whatsapp {
+  --whatsapp: #25d366;
+  /* Bottom-left: the hosting badge on the free Netlify plan occupies the bottom-right corner. */
+  position: fixed;
+  left: clamp(16px, 3vw, 32px);
+  bottom: clamp(16px, 3vw, 32px);
+  z-index: 40;
+  display: grid;
+  justify-items: start;
+  gap: 14px;
+}
+
+.whatsapp__launcher {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid color-mix(in srgb, var(--whatsapp) 55%, transparent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--whatsapp) 16%, var(--bg-raised));
+  color: var(--whatsapp);
+  box-shadow:
+    0 0 0 8px color-mix(in srgb, var(--whatsapp) 7%, transparent),
+    0 18px 40px -18px rgba(0, 0, 0, 0.8);
+  transition:
+    transform var(--fast) var(--ease),
+    background var(--fast) var(--ease);
+}
+
+.whatsapp__launcher:hover {
+  background: color-mix(in srgb, var(--whatsapp) 26%, var(--bg-raised));
+  transform: translateY(-2px);
+}
+
+.whatsapp__panel {
+  display: grid;
+  gap: 12px;
+  width: min(340px, calc(100vw - 32px));
+  padding: 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
+  background: var(--card-shine), var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.whatsapp__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.whatsapp__head > div {
+  min-width: 0;
+  margin-right: auto;
+}
+
+.whatsapp__avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--whatsapp) 18%, transparent);
+  color: var(--whatsapp);
+}
+
+.whatsapp__name {
+  font-weight: 600;
+}
+
+.whatsapp__hint,
+.whatsapp__note {
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+
+.whatsapp__label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.whatsapp__panel textarea {
+  width: 100%;
+  min-height: 104px;
+  padding: 11px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-m);
+  background: var(--bg-raised);
+  line-height: 1.55;
+  resize: vertical;
+}
+
+.whatsapp__panel textarea:focus-visible {
+  outline: none;
+  border-color: var(--whatsapp);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--whatsapp) 18%, transparent);
+}
+
+.whatsapp__send {
+  background: var(--whatsapp);
+  color: #04240f;
+}
+
+.whatsapp__send:hover {
+  background: color-mix(in srgb, var(--whatsapp) 86%, #fff);
+}
+
+:root[data-theme='light'] .whatsapp {
+  --whatsapp: #128c4a;
+}
+
+:root[data-theme='light'] .whatsapp__send {
+  color: #fff;
+}
+
+@media print {
+  .whatsapp {
+    display: none;
+  }
+}
+
 /* ---------- Footer ---------- */
 
 .footer {

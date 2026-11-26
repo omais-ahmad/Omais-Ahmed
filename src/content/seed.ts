@@ -16,6 +16,7 @@ export const seed: SiteContent = {
     email: 'webdeveloperomais@gmail.com',
     phone: '+92 339 510 1414',
     showPhone: true,
+    whatsapp: '+92 339 510 1414',
     experienceLabel: '3+ years',
     availability: 'Open to full-stack, frontend and software engineering roles',
     photo: 'img/profile.webp',

@@ -3,6 +3,7 @@ import { Outlet, Route, Routes, useLocation } from 'react-router'
 import { ErrorBoundary } from './components/ErrorBoundary'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { WhatsAppChat } from './components/WhatsAppChat'
 import { ContentProvider } from './lib/content'
 import { Seo } from './lib/seo'
 import { HomePage } from './pages/HomePage'
@@ -38,6 +39,7 @@ function PublicLayout() {
         </ErrorBoundary>
       </main>
       <Footer />
+      <WhatsAppChat />
     </ContentProvider>
   )
 }

@@ -332,6 +332,7 @@ export const SINGLETONS: SingletonConfig[] = [
       { type: 'email', name: 'email', label: 'Email', required: true },
       { type: 'text', name: 'phone', label: 'Phone', maxLength: 30 },
       { type: 'boolean', name: 'showPhone', label: 'Show phone number publicly' },
+      { type: 'text', name: 'whatsapp', label: 'WhatsApp number', maxLength: 30, placeholder: '+92 300 0000000', help: 'International format with the country code. Leave empty to remove the WhatsApp button.' },
       { type: 'text', name: 'experienceLabel', label: 'Experience', maxLength: 30, placeholder: '3+ years' },
       { type: 'text', name: 'availability', label: 'Status line', maxLength: 120 },
       { type: 'upload', name: 'photo', label: 'Profile photo', kind: 'image', folder: 'profile' },

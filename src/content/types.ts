@@ -28,6 +28,8 @@ export interface Profile {
   email: string
   phone: string
   showPhone: boolean
+  /** WhatsApp number in international format, e.g. "+92 300 0000000". Empty hides the WhatsApp contact options. */
+  whatsapp: string
   experienceLabel: string
   availability: string
   photo: string

@@ -7,7 +7,7 @@ import { seed } from '@/content/seed'
 import { COLLECTION_KEYS, SINGLETON_KEYS, SKILL_LEVELS, type CollectionItem } from '@/content/types'
 import { validateContact } from '@/lib/contact'
 import { assembleContent, itemToData, publishedOnly, type ItemRow } from '@/lib/content-mapping'
-import { formatPeriod, safeExternalUrl, slugify } from '@/lib/format'
+import { formatPeriod, safeExternalUrl, slugify, whatsappUrl } from '@/lib/format'
 
 const publicFile = (path: string) => fileURLToPath(new URL(`../public/${path}`, import.meta.url))
 
@@ -178,5 +178,13 @@ describe('formatting helpers', () => {
     expect(safeExternalUrl('data:text/html,x')).toBeNull()
     expect(safeExternalUrl('https://example.com')).toBe('https://example.com')
     expect(safeExternalUrl('mailto:a@b.co')).toBe('mailto:a@b.co')
+  })
+
+  it('builds WhatsApp links from international numbers and encodes the message', () => {
+    expect(whatsappUrl('+92 339 510 1414')).toBe('https://wa.me/923395101414')
+    expect(whatsappUrl('0092-339-5101414', ' Hi & hello? ')).toBe('https://wa.me/923395101414?text=Hi%20%26%20hello%3F')
+    expect(whatsappUrl('')).toBeNull()
+    expect(whatsappUrl('12345')).toBeNull()
+    expect(whatsappUrl(seed.profile.whatsapp)).not.toBeNull()
   })
 })
