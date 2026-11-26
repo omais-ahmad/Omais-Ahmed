@@ -4,12 +4,14 @@ import { Icon } from '@/components/Icon'
 import { ProjectVisual } from '@/components/ProjectVisual'
 import { Reveal } from '@/components/Reveal'
 import { Section } from '@/components/Section'
+import { Tilt } from '@/components/Tilt'
 import type { Project } from '@/content/types'
 import { useContent } from '@/lib/content'
 
 function ProjectCard({ project, variant }: { project: Project; variant: 'featured' | 'standard' | 'compact' }) {
   const titleId = `project-${project.id}`
   return (
+    <Tilt max={variant === 'featured' ? 2.5 : 6}>
     <article className={`project-card project-card--${variant}`} aria-labelledby={titleId}>
       <div className="project-card__visual">
         <ProjectVisual project={project} />
@@ -42,6 +44,7 @@ function ProjectCard({ project, variant }: { project: Project; variant: 'feature
         </span>
       </div>
     </article>
+    </Tilt>
   )
 }
 

@@ -4,6 +4,8 @@
   position: relative;
   padding-block: clamp(40px, 6vw, 72px) clamp(56px, 8vw, 96px);
   isolation: isolate;
+  /* The 3D canvas is wider than its column; clip it at the page edge without clipping the backdrop above. */
+  overflow-x: clip;
 }
 
 /* Technical grid that fades out, under two soft pools of light behind the profile card. */
@@ -131,7 +133,36 @@
 
 .hero__visual {
   position: relative;
+}
+
+/* The WebGL scene is larger than the cards so the orbits show around them. */
+.hero__canvas {
+  position: absolute;
+  inset: -12% -22% -6%;
+  z-index: -1;
+  width: 144%;
+  height: 118%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 900ms var(--ease);
+}
+
+.hero__canvas.is-ready {
+  opacity: 1;
+}
+
+.hero__stage {
+  position: relative;
   padding-bottom: 204px;
+}
+
+/* Depth inside the tilting stage: the code card floats in front of the profile card. */
+.hero__stage .id-card {
+  transform: translateZ(0);
+}
+
+.hero__stage .code-card {
+  transform: translateZ(56px);
 }
 
 .id-card {
@@ -371,14 +402,15 @@
     flex: 1 1 100%;
   }
 
-  .hero__visual {
+  .hero__stage {
     padding-bottom: 0;
   }
 
-  .code-card {
+  .hero__stage .code-card {
     position: static;
     width: 100%;
     margin-top: 14px;
+    transform: none;
   }
 
   .facts {
@@ -788,10 +820,102 @@
   border-style: dashed;
 }
 
+.skills__stage {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 56px);
+  margin-bottom: 40px;
+  padding: clamp(20px, 3vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    var(--card-shine),
+    radial-gradient(60% 80% at 78% 50%, var(--glow), transparent 72%),
+    var(--surface);
+  overflow: hidden;
+}
+
+.skills__stage-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.skills__stage-copy .card__label {
+  margin: 0;
+}
+
+.skills__stage-copy h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+  letter-spacing: -0.02em;
+}
+
+.skills__stage-copy p:last-child {
+  color: var(--text-muted);
+}
+
+.sphere {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.sphere.is-dragging {
+  cursor: grabbing;
+}
+
+.sphere__core {
+  position: absolute;
+  inset: 22%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 34%, var(--glow), transparent 68%);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.sphere__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-2) 84%, transparent);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  color: var(--text-muted);
+  will-change: transform, opacity;
+}
+
+.sphere__label--core {
+  border-color: var(--accent-line);
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  color: var(--accent);
+}
+
 .skills__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+}
+
+.skills__grid > .reveal {
+  display: grid;
+}
+
+@media (max-width: 860px) {
+  .skills__stage {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sphere {
+    max-width: 380px;
+  }
 }
 
 .skill-card {

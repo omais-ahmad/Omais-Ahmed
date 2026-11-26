@@ -1,7 +1,9 @@
 import { Link } from 'react-router'
 import { ArchitectureDiagram } from '@/components/ArchitectureDiagram'
+import { HeroCanvas } from '@/components/HeroCanvas'
 import { Icon } from '@/components/Icon'
 import { SocialLinks } from '@/components/SocialLinks'
+import { Tilt } from '@/components/Tilt'
 import { Typewriter } from '@/components/Typewriter'
 import { assetUrl } from '@/lib/config'
 import { useContent } from '@/lib/content'
@@ -77,6 +79,8 @@ export function Hero() {
         </div>
 
         <div className="hero__visual">
+          <HeroCanvas />
+          <Tilt className="hero__stage" max={8}>
           <div className="id-card">
             <div className="id-card__top">
               {profile.photo && (
@@ -140,6 +144,7 @@ export function Hero() {
               </code>
             </pre>
           </div>
+          </Tilt>
         </div>
       </div>
 
