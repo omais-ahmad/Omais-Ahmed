@@ -25,8 +25,8 @@ export const seed: SiteContent = {
 
   hero: {
     status: 'Open to new opportunities',
-    roles: ['Full-Stack Software Engineer', 'Angular Developer', 'MEAN Stack Developer', 'MERN Stack Developer'],
-    coreStack: ['Angular', 'React.js', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB'],
+    roles: ['Full-Stack Software Engineer', 'Angular Developer', '.NET Developer', 'MERN Stack Developer'],
+    coreStack: ['Angular', '.NET', 'React.js', 'TypeScript', 'Node.js', 'MongoDB'],
     eyebrow: 'Full-Stack Software Engineer · Angular & MERN',
     headline: 'Building scalable software. Engineering better digital experiences.',
     subheadline:
@@ -152,7 +152,7 @@ export const seed: SiteContent = {
     heading: 'An engineer who works on how the system is put together, not only how it looks.',
     paragraphs: [
       'I am a full-stack software engineer based in Islamabad with 3+ years of professional experience building web and mobile applications across FinTech, healthcare, tourism, e-commerce and SaaS. Most of my work sits where product requirements meet system structure: how an application is divided into modules, what is shared between teams, and how the parts communicate.',
-      'On the frontend I work mainly in Angular and React. At CyberSoft Vantage I work directly with Sukna Capital, a Saudi FinTech company, leading frontend development of its lending and investment platform. There I designed a feature-based modular architecture and built a private Angular component library, published through Azure Artifacts, that its four web portals share as their design system, together with a configuration-driven form engine that keeps new screens from becoming new code.',
+      'On the frontend I work mainly in Angular and React. At CyberSoft Vantage I am a full stack developer working directly with Sukna Capital, a Saudi FinTech company, on its lending and investment platform: Angular on the frontend, .NET on the backend, and I lead the frontend. There I designed a feature-based modular architecture and built a private Angular component library, published through Azure Artifacts, that its four web portals share as their design system, together with a configuration-driven form engine that keeps new screens from becoming new code.',
       'On the backend I build REST APIs with Node.js and Express, secured with JWT authentication and role-based access control. I have used RabbitMQ for asynchronous processing and background jobs, Redis for caching, and SignalR and Socket.IO for real-time updates, and I have shipped cross-platform mobile apps with Ionic for Android, iOS and the web.',
     ],
     principles: [
@@ -216,12 +216,12 @@ export const seed: SiteContent = {
       id: 'exp-cybersoft-vantage',
       published: true,
       company: 'CyberSoft Vantage (CSV)',
-      role: 'MEAN Stack Developer',
+      role: 'Full Stack Developer',
       location: 'Islamabad, Pakistan',
       start: '2026-01',
       end: '',
       summary:
-        'Working directly with Sukna Capital, a Saudi FinTech company, and leading frontend development of its Angular web platform: four portals covering loan operations, borrowers, investor operations and investors.',
+        'Full stack developer working directly with Sukna Capital, a Saudi FinTech company, on its lending and investment platform: Angular on the frontend and .NET on the backend. I lead the frontend across four portals covering loan operations, borrowers, investor operations and investors.',
       highlights: [
         'Led the frontend development of the Sukna Capital web platform using Angular, delivering maintainable, high-performance solutions across four business portals.',
         'Delivered the portals in two pairs: an operations back office for loan management with a borrower portal, and an operations back office for investor management with an investor portal.',
@@ -236,7 +236,7 @@ export const seed: SiteContent = {
         'Took part in solution design, technical planning, code reviews and production deployments, contributing to frontend architecture decisions.',
         'Applied SOLID principles, Clean Architecture concepts and component-driven development.',
       ],
-      stack: ['Angular', 'TypeScript', 'Tailwind CSS', 'SignalR', 'Azure Artifacts', 'REST APIs'],
+      stack: ['Angular', '.NET', 'TypeScript', 'Tailwind CSS', 'SignalR', 'Azure Artifacts', 'REST APIs'],
     },
     {
       id: 'exp-syslab',
@@ -294,8 +294,8 @@ export const seed: SiteContent = {
         'Lending and investment platform for Sukna Capital, a Saudi FinTech company: two operations back offices, a borrower portal and an investor portal, built as four Angular portals on one shared component library.',
       description:
         'Sukna Capital is a Saudi FinTech company. Through CyberSoft Vantage I worked directly with its team on the web platform, which is made of four portals in two pairs: an operations back office for loan management with a borrower portal, and an operations back office for investor management with an investor portal. I architected and developed the Angular frontend: a feature-based modular application structure, a private component library that all four portals consume, and a configuration-driven form system that lets new business workflows be assembled rather than rebuilt. On that foundation I implemented the onboarding, KYC, guarantor form and subscription workflows, and the funds management modules for fund allocation and the fund book.',
-      role: 'Frontend lead: application architecture, component library and feature development',
-      technologies: ['Angular', 'TypeScript', 'Azure Artifacts', 'SignalR', 'Angular i18n', 'REST APIs'],
+      role: 'Full stack developer and frontend lead: Angular architecture, component library and features, with backend work in .NET',
+      technologies: ['Angular', '.NET', 'TypeScript', 'Azure Artifacts', 'SignalR', 'Angular i18n', 'REST APIs'],
       responsibilities: [
         'Architected the Angular application around feature modules with shared and core layers.',
         'Designed, built and published the private Angular NPM component library on Azure Artifacts.',
@@ -1323,7 +1323,8 @@ export const seed: SiteContent = {
         { name: 'WordPress', level: 'familiar' },
         { name: 'Java', level: 'familiar' },
         { name: 'NestJS', level: 'learning' },
-        { name: 'ASP.NET Web API', level: 'learning' },
+        { name: '.NET', level: 'applied' },
+        { name: 'ASP.NET Web API', level: 'applied' },
       ],
     },
     {

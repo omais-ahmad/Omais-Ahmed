@@ -14,7 +14,7 @@ const publicFile = (path: string) => fileURLToPath(new URL(`../public/${path}`, 
 describe('bundled content', () => {
   it('keeps the three employers as separate entries with the documented dates', () => {
     expect(seed.experience.map((entry) => [entry.company, entry.role, entry.start, entry.end])).toEqual([
-      ['CyberSoft Vantage (CSV)', 'MEAN Stack Developer', '2026-01', ''],
+      ['CyberSoft Vantage (CSV)', 'Full Stack Developer', '2026-01', ''],
       ['Syslab Technologies Sdn Bhd', 'MERN Stack Developer', '2025-09', '2026-01'],
       ['SoftoSol Pvt Ltd', 'Full Stack Developer', '2023-03', '2025-09'],
     ])
@@ -64,9 +64,10 @@ describe('bundled content', () => {
     for (const url of urls) expect(safeExternalUrl(url), url).not.toBeNull()
   })
 
-  it('marks ASP.NET Web API as learning, and lists no unverified frameworks', () => {
+  it('lists .NET as work experience (the current backend stack), and no unverified frameworks', () => {
     const skills = seed.skillCategories.flatMap((category) => category.skills)
-    expect(skills.find((skill) => skill.name === 'ASP.NET Web API')?.level).toBe('learning')
+    expect(skills.find((skill) => skill.name === '.NET')?.level).toBe('applied')
+    expect(skills.find((skill) => skill.name === 'ASP.NET Web API')?.level).toBe('applied')
     const names = skills.map((skill) => skill.name.toLowerCase())
     expect(names.some((name) => name.includes('react native') || name.includes('next.js'))).toBe(false)
     const levels = SKILL_LEVELS.map((level) => level.value)
