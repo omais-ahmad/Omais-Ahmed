@@ -1,0 +1,74 @@
+/* Design tokens. Dark is the default identity; light is a full alternative, not an afterthought. */
+
+:root {
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', 'Cascadia Mono', Consolas, monospace;
+
+  --container: 1200px;
+  --gutter: clamp(20px, 4vw, 40px);
+  --section-space: clamp(80px, 10vw, 140px);
+  --header-height: 72px;
+
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 20px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --fast: 160ms;
+  --slow: 600ms;
+
+  /* Near-black with a faint green cast, and one luminous accent that runs into blue. */
+  color-scheme: dark;
+  --bg: #060809;
+  --bg-raised: #0a0e0f;
+  --surface: #0c1113;
+  --surface-2: #131a1c;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text: #eef3f1;
+  --text-muted: #a3b0ac;
+  --text-faint: #7d8a86;
+  --accent: #2fe6b7;
+  --accent-2: #46b9ff;
+  --accent-strong: #7df3d6;
+  --accent-soft: rgba(47, 230, 183, 0.09);
+  --accent-line: rgba(47, 230, 183, 0.38);
+  --on-accent: #03130e;
+  --ok: #2fe6b7;
+  --danger: #ff8f85;
+  --amber: #e7b765;
+  --grid-line: rgba(255, 255, 255, 0.035);
+  --glow: rgba(47, 230, 183, 0.2);
+  --glow-2: rgba(70, 185, 255, 0.14);
+  --header-bg: rgba(10, 14, 15, 0.72);
+  --shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.95);
+  --card-shine: linear-gradient(160deg, rgba(255, 255, 255, 0.045), transparent 42%);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f4f7f6;
+  --bg-raised: #fafcfb;
+  --surface: #ffffff;
+  --surface-2: #eef3f1;
+  --line: rgba(10, 24, 20, 0.1);
+  --line-strong: rgba(10, 24, 20, 0.22);
+  --text: #0b1512;
+  --text-muted: #47554f;
+  --text-faint: #5c6a64;
+  --accent: #067a5e;
+  --accent-2: #0a62b4;
+  --accent-strong: #045a45;
+  --accent-soft: rgba(6, 122, 94, 0.08);
+  --accent-line: rgba(6, 122, 94, 0.4);
+  --on-accent: #ffffff;
+  --ok: #067a5e;
+  --danger: #b93225;
+  --amber: #9a6a0c;
+  --grid-line: rgba(10, 24, 20, 0.05);
+  --glow: rgba(6, 122, 94, 0.12);
+  --glow-2: rgba(10, 98, 180, 0.08);
+  --header-bg: rgba(250, 252, 251, 0.82);
+  --shadow: 0 30px 60px -40px rgba(10, 24, 20, 0.35);
+  --card-shine: none;
+}

@@ -1,0 +1,46 @@
+# Netlify build and hosting configuration.
+#
+# Every push to the production branch runs the same pipeline the old GitHub Pages workflow ran:
+# type-check, lint, test, snapshot the published database content, then build and prerender.
+#
+# Set these in Netlify (Site configuration -> Environment variables) to connect the admin
+# dashboard. Both are public identifiers; never add a secret or service_role key:
+#   VITE_SUPABASE_URL
+#   VITE_SUPABASE_ANON_KEY
+# And these for the contact form email notification:
+#   VITE_EMAILJS_PUBLIC_KEY, VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID
+# The public site URL is taken from Netlify's own URL variable (see vite.config.ts).
+
+[build]
+  command = "npm run typecheck && npm run lint && npm test && npm run content:pull && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# A project published in the admin dashboard after the last deploy has no prerendered file
+# yet. Serve the application shell so the page still renders from the live content.
+# Redirects never shadow a file that exists, so prerendered project pages are unaffected.
+[[redirects]]
+  from = "/projects/*"
+  to = "/404.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Vite fingerprints everything under /assets/, so those files can be cached indefinitely.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
